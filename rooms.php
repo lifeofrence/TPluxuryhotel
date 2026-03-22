@@ -62,170 +62,233 @@
                 <p data-aos="fade-up" data-aos-delay="100">Experience unparalleled luxury and a "home away from home" atmosphere in our well-appointed rooms and suites. Each room is designed with your comfort in mind.</p>
               </div>
             </div>
+          <div class="container-fluid px-md-0">
             <div class="row no-gutters align-items-stretch room-animate site-section">
               <div class="col-md-7 img-wrap" data-jarallax-element="-100">
-                
-                <div class="bg-image h-100" style="background-color: #efefef; background-image: url('images/room_1_a.jpg');">
-                
+                <div class="bg-image h-100" style="background-color: #efefef; background-image: url('images/Ambassadorial Suite 2.jpg');"></div>
+              </div>
+              <div class="col-md-5">
+                <div class="row justify-content-center">
+                  <div class="col-md-8 py-5">
+                    <h3 class="display-4 heading">Grand Royale Suite</h3>
+                    <div class="room-exerpt">
+                      <div class="room-price mb-4">₦110,000<span class="per">/night</span></div>
+                      <p>Our most expansive and luxurious offering, the Grand Royale Suite provides ultimate elegance and comfort for elite travelers.</p>
+                      <div class="row mt-5">
+                        <div class="col-12">
+                          <h3 class="mb-4">Amenities</h3>
+                          <ul class="list-unstyled ul-check">
+                            <li>Super King size bed</li>
+                            <li>Premium Lounge area</li>
+                            <li>Ultra High-speed WiFi</li>
+                            <li>Dedicated Workspace</li>
+                            <li>24/7 VIP Service</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <p class="mt-5"><a href="booking.php" class="btn btn-black px-5 text-white">Book Now</a></p>
+                    </div>
+                  </div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid px-md-0">
+            <div class="row no-gutters align-items-stretch room-animate site-section">
+              <div class="col-md-7 order-md-2 img-wrap" data-jarallax-element="-100">
+                <div class="bg-image h-100" style="background-color: #efefef; background-image: url('images/Amabassadorial Sitting Room 2.jpg');"></div>
               </div>
               <div class="col-md-5">
                 <div class="row justify-content-center">
                   <div class="col-md-8 py-5">
                     <h3 class="display-4 heading">Ambassadorial Suite</h3>
                     <div class="room-exerpt">
-                      <div class="room-price mb-4">₦120,000<span class="per">/night</span></div>
-                      <p>Our most luxurious room, featuring a separate living area, king-sized bed, and premium amenities for a truly royal experience.</p>
-                      <p>Perfect for those who seek the highest level of comfort and privacy during their stay in Abuja.</p>
-
+                      <div class="room-price mb-4">₦100,000<span class="per">/night</span></div>
+                      <p>A prestigious suite offering unparalleled luxury and space, perfect for those who seek the highest level of comfort.</p>
                       <div class="row mt-5">
                         <div class="col-12">
                           <h3 class="mb-4">Amenities</h3>
                           <ul class="list-unstyled ul-check">
-                            <li>King size bed with premium linens</li>
-                            <li>50-inch Smart TV with satellite channels</li>
-                            <li>Complimentary High-speed WiFi</li>
+                            <li>King size bed</li>
+                            <li>Smart TV with satellite channels</li>
+                            <li>High-speed WiFi</li>
                             <li>Mini-bar and Coffee maker</li>
-                            <li>24/7 Room service</li>
+                            <li>Private Balcony</li>
                           </ul>
                         </div>
                       </div>
-                      <p class="mt-5"><a href="booking.html" class="btn btn-black px-5 text-white">Book Now</a></p>
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-
-          <div class="container-fluid px-md-0">
-            <div class="row no-gutters align-items-stretch room-animate site-section">
-              <div class="col-md-7 order-md-2 img-wrap" data-jarallax-element="-100">
-                
-                <div class="bg-image h-100" style="background-color: #efefef; background-image: url('images/slider_2.jpg');"></div>
-                
-              </div>
-              <div class="col-md-5">
-                <div class="row justify-content-center">
-                  <div class="col-md-8 py-5">
-                    <h3 class="display-4 heading">Queens Royal</h3>
-                    <div class="room-exerpt">
-                      <div class="room-price mb-4">₦95,000<span class="per">/night</span></div>
-                      <p>Elegant and spacious, the Queens Royal offers a queen-sized bed and a touch of royalty, perfect for those who appreciate fine aesthetics.</p>
-
-                      <p>Equipped with modern comforts to ensure your stay is as restful as possible.</p>
-
-                      <div class="row mt-5">
-                        <div class="col-12">
-                          <h3 class="mb-4">Amenities</h3>
-                          <ul class="list-unstyled ul-check">
-                            <li>Queen size bed with plush mattress</li>
-                            <li>42-inch LED TV with cable channels</li>
-                            <li>High-speed WiFi access</li>
-                            <li>Safety deposit box</li>
-                            <li>Executive Work desk</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <p class="mt-5"><a href="booking.html" class="btn btn-black px-5 text-white">Book Now</a></p>
+                      <p class="mt-5"><a href="booking.php" class="btn btn-black px-5 text-white">Book Now</a></p>
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
 
           <div class="container-fluid px-md-0">
-
             <div class="row no-gutters align-items-stretch room-animate site-section">
               <div class="col-md-7 img-wrap" data-jarallax-element="-100">
-                
-                <div class="bg-image h-100" style="background-color: #efefef; background-image: url('images/room_1_a.jpg');"></div>
-                
+                <div class="bg-image h-100" style="background-color: #efefef; background-image: url('images/Business Royal 1.jpg');"></div>
               </div>
               <div class="col-md-5">
                 <div class="row justify-content-center">
                   <div class="col-md-8 py-5">
-                    <h3 class="display-4 heading">Business Royal</h3>
+                    <h3 class="display-4 heading">Business Royale</h3>
                     <div class="room-exerpt">
                       <div class="room-price mb-4">₦90,000<span class="per">/night</span></div>
-                      <p>Tailored specifically for the business traveler, featuring a functional workspace and high-speed connectivity to keep you productive.</p>
-                      <p>Comfort and efficiency combined in one elegant package.</p>
-
+                      <p>Tailored specifically for the business traveler, featuring a functional workspace and high-speed connectivity.</p>
                       <div class="row mt-5">
                         <div class="col-12">
                           <h3 class="mb-4">Amenities</h3>
                           <ul class="list-unstyled ul-check">
-                            <li>Queen size bed with ergonomic support</li>
-                            <li>Fastest available WiFi connectivity</li>
-                            <li>Premium Coffee maker and Mini-fridge</li>
-                            <li>Direct dial telephone</li>
+                            <li>Queen size bed</li>
+                            <li>Fast WiFi connectivity</li>
+                            <li>Executive Work desk</li>
+                            <li>Mini-fridge</li>
                             <li>Daily laundry service</li>
                           </ul>
                         </div>
                       </div>
-                      <p class="mt-5"><a href="booking.html" class="btn btn-black px-5 text-white">Book Now</a></p>
+                      <p class="mt-5"><a href="booking.php" class="btn btn-black px-5 text-white">Book Now</a></p>
                     </div>
-
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
 
-
           <div class="container-fluid px-md-0">
-            <div class="row no-gutters align-items-stretch room-animate site-section pb-0">
+            <div class="row no-gutters align-items-stretch room-animate site-section">
               <div class="col-md-7 order-md-2 img-wrap" data-jarallax-element="-100">
-                <div class="bg-image h-100" style="background-color: #efefef; background-image: url('images/slider_2.jpg');"></div>
+                <div class="bg-image h-100" style="background-color: #efefef; background-image: url('images/Executive Suite.jpg');"></div>
               </div>
               <div class="col-md-5">
                 <div class="row justify-content-center">
                   <div class="col-md-8 py-5">
-                    <h3 class="display-4 heading">Executive Deluxe</h3>
+                    <h3 class="display-4 heading">Executive Suite</h3>
                     <div class="room-exerpt">
-                      <div class="room-price mb-4">₦80,000<span class="per">/night</span></div>
-                      <p>A perfect blend of comfort and style for an executive stay. Designed for relaxation after a long day of meetings or exploration.</p>
-
-                      <p>Modern furnishing and a warm atmosphere await you.</p>
-
+                      <div class="room-price mb-4">₦85,000<span class="per">/night</span></div>
+                      <p>A perfect blend of comfort and style for an executive stay, designed for relaxation and sophistication.</p>
                       <div class="row mt-5">
                         <div class="col-12">
                           <h3 class="mb-4">Amenities</h3>
                           <ul class="list-unstyled ul-check">
-                            <li>Queen size bed with memory foam</li>
-                            <li>Smart TV with Netflix capability</li>
-                            <li>Complimentary WiFi access</li>
-                            <li>Mini-bar and Tea/Coffee facilities</li>
+                            <li>Queen size bed</li>
+                            <li>Smart TV</li>
+                            <li>Complimentary WiFi</li>
+                            <li>Cozy seating area</li>
                             <li>Modern rainfall shower</li>
                           </ul>
                         </div>
                       </div>
-                      <p class="mt-5"><a href="booking.html" class="btn btn-black px-5 text-white">Book Now</a></p>
+                      <p class="mt-5"><a href="booking.php" class="btn btn-black px-5 text-white">Book Now</a></p>
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
 
+          <div class="container-fluid px-md-0">
+            <div class="row no-gutters align-items-stretch room-animate site-section">
+              <div class="col-md-7 img-wrap" data-jarallax-element="-100">
+                <div class="bg-image h-100" style="background-color: #efefef; background-image: url('images/Standard Room 2.jpg');"></div>
+              </div>
+              <div class="col-md-5">
+                <div class="row justify-content-center">
+                  <div class="col-md-8 py-5">
+                    <h3 class="display-4 heading">Standard Room</h3>
+                    <div class="room-exerpt">
+                      <div class="room-price mb-4">₦80,000<span class="per">/night</span></div>
+                      <p>Excellent comfort and essential amenities for a pleasant stay, offering great value without compromising quality.</p>
+                      <div class="row mt-5">
+                        <div class="col-12">
+                          <h3 class="mb-4">Amenities</h3>
+                          <ul class="list-unstyled ul-check">
+                            <li>Queen size bed</li>
+                            <li>LED TV</li>
+                            <li>WiFi Access</li>
+                            <li>Workspace</li>
+                            <li>Standard bathroom</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <p class="mt-5"><a href="booking.php" class="btn btn-black px-5 text-white">Book Now</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid px-md-0">
+            <div class="row no-gutters align-items-stretch room-animate site-section">
+              <div class="col-md-7 order-md-2 img-wrap" data-jarallax-element="-100">
+                <div class="bg-image h-100" style="background-color: #efefef; background-image: url('images/Studio Suite 3.jpg');"></div>
+              </div>
+              <div class="col-md-5">
+                <div class="row justify-content-center">
+                  <div class="col-md-8 py-5">
+                    <h3 class="display-4 heading">Studio Suite</h3>
+                    <div class="room-exerpt">
+                      <div class="room-price mb-4">₦75,000<span class="per">/night</span></div>
+                      <p>Cozy and well-functional space perfect for individual travelers or short stays in Yenagoa.</p>
+                      <div class="row mt-5">
+                        <div class="col-12">
+                          <h3 class="mb-4">Amenities</h3>
+                          <ul class="list-unstyled ul-check">
+                            <li>Double bed</li>
+                            <li>TV</li>
+                            <li>WiFi Access</li>
+                            <li>Compact Workspace</li>
+                            <li>Private bathroom</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <p class="mt-5"><a href="booking.php" class="btn btn-black px-5 text-white">Book Now</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="untree_co--site-section bg-light">
+            <div class="container">
+              <div class="row justify-content-center text-center site-section pt-0">
+                <div class="col-md-8">
+                  <h2 class="display-4 mb-5" data-aos="fade-up">Conditions of Stay</h2>
+                  <div class="text-left" data-aos="fade-up" data-aos-delay="100">
+                    <ul class="list-unstyled custom-list">
+                      <li class="mb-3"><strong>FREE INTERNET</strong></li>
+                      <li class="mb-3"><strong>COMPLIMENTARY BREAKFAST AT FULL RATE</strong></li>
+                      <li class="mb-3">CHECK OUT TIME IS 12 NOON, WHILE CHECK-IN TIME IS 1PM</li>
+                      <li class="mb-3">CHECKOUT TIME BETWEEN 1PM TO 3PM ATTRACTS HALF DAY CHARGE</li>
+                      <li class="mb-3">CHECKOUT TIME BY 6PM ATTRACTS FULL DAY CHARGE</li>
+                      <li class="mb-3">NO PET ALLOWED</li>
+                      <li class="mb-3">NO FOOD OR DRINKS FROM OUTSIDE IS ALLOWED WITHIN THE HOTEL PREMISES</li>
+                      <li class="mb-3">CARS PARKED AT OWNERS RISK</li>
+                      <li class="mb-3">ALL ROOMS ARE NON-SMOKING AND ATTRACTS A FINE OF N50,000 FOR DEFAULTERS.</li>
+                      <li class="mb-3">RATES ARE SUBJECT TO CHANGE WITHOUT PRIOR NOTICE</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
     
-        <div class="untree_co--site-section py-5 bg-body-darker cta">
+        <!-- <div class="untree_co--site-section py-5 bg-body-darker cta">
           <div class="container">
             <div class="row">
               <div class="col-12 text-center">
-                <h3 class="m-0 p-0">If you have any special requests, please feel free to call us. <a href="tel:+2348000000000">+234 800 000 0000</a></h3>
+                <h3 class="m-0 p-0">If you have any special requests, please feel free to call us. <a href="tel:+2347017834528">+234 701 783 4528</a></h3>
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
 
             <?php include 'includes/footer.php'; ?>

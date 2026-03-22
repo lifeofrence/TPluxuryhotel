@@ -45,7 +45,7 @@
       <main class="untree_co--site-main">
         
 
-        <div class="untree_co--site-hero inner-page" style="background-image: url('images/slider_2.jpg')">
+        <div class="untree_co--site-hero inner-page" style="background-image: url('images/Rooftop Bar 1.jpg')">
           <div class="container">
             <div class="row align-items-center justify-content-center">
               <div class="col-md-7 text-center">
@@ -70,10 +70,10 @@
             <div class="row align-items-stretch">
               <div class="col-9 relative" data-aos="fade-up" data-aos-delay="">
                 <div class="owl-carousel owl-gallery-big">
-                  <div class="slide-thumb bg-image" style="background-image: url('images/room_1_a.jpg')"></div>
-                  <div class="slide-thumb bg-image" style="background-image: url('images/room_1_b.jpg')"></div>
-                  <div class="slide-thumb bg-image" style="background-image: url('images/room_2_a.jpg')"></div>
-                  <div class="slide-thumb bg-image" style="background-image: url('images/room_2_b.jpg')"></div>
+                  <div class="slide-thumb bg-image" style="background-image: url('images/Reception 1.jpg')"></div>
+                  <div class="slide-thumb bg-image" style="background-image: url('images/Lobby Waiting Area.jpg')"></div>
+                  <div class="slide-thumb bg-image" style="background-image: url('images/Rooftop Bar.jpg')"></div>
+                  <div class="slide-thumb bg-image" style="background-image: url('images/Ambassadorial Suite.jpg')"></div>
                 </div>
 
                 <div class="slider-counter text-center"></div>
@@ -82,10 +82,10 @@
               <div class="col-3 relative"  data-aos="fade-up" data-aos-delay="100">
 
                 <div class="owl-carousel owl-gallery-small">
-                  <div class="slide-thumb bg-image" style="background-image: url('images/room_1_a.jpg')"><a href="#"></a></div>
-                  <div class="slide-thumb bg-image" style="background-image: url('images/room_1_b.jpg')"><a href="#"></a></div>
-                  <div class="slide-thumb bg-image" style="background-image: url('images/room_2_a.jpg')"><a href="#"></a></div>
-                  <div class="slide-thumb bg-image" style="background-image: url('images/room_2_b.jpg')"><a href="#"></a></div>
+                  <div class="slide-thumb bg-image" style="background-image: url('images/Reception 1.jpg')"><a href="#"></a></div>
+                  <div class="slide-thumb bg-image" style="background-image: url('images/Lobby Waiting Area.jpg')"><a href="#"></a></div>
+                  <div class="slide-thumb bg-image" style="background-image: url('images/Rooftop Bar.jpg')"><a href="#"></a></div>
+                  <div class="slide-thumb bg-image" style="background-image: url('images/Ambassadorial Suite.jpg')"><a href="#"></a></div>
                 </div>
 
               </div>
@@ -103,38 +103,38 @@
             </div>
             <div class="row gutter-2">
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="">
-                <a href="images/img_1.jpg" data-fancybox="gallery">
-                  <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+                <a href="images/Resturant.jpg" data-fancybox="gallery">
+                  <img src="images/Resturant.jpg" alt="Restaurant/Dining Area" class="img-fluid">
                 </a>
               </div>
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <a href="images/img_2.jpg" data-fancybox="gallery">
-                  <img src="images/img_2.jpg" alt="Image" class="img-fluid">
+                <a href="images/Gym.jpg" data-fancybox="gallery">
+                  <img src="images/Gym.jpg" alt="Gym" class="img-fluid">
                 </a>
               </div>
               <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                <a href="images/img_1.jpg" data-fancybox="gallery">
-                  <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+                <a href="images/Snokker Area.jpg" data-fancybox="gallery">
+                  <img src="images/Snokker Area.jpg" alt="Snooker Area" class="img-fluid">
                 </a>
               </div>
               <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                <a href="images/img_1.jpg" data-fancybox="gallery">
-                  <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+                <a href="images/Football Area.jpg" data-fancybox="gallery">
+                  <img src="images/Football Area.jpg" alt="Football Viewing Spot" class="img-fluid">
                 </a>
               </div>
               <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                <a href="images/img_1.jpg" data-fancybox="gallery">
-                  <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+                <a href="images/Vip Lounge.jpg" data-fancybox="gallery">
+                  <img src="images/Vip Lounge.jpg" alt="VIP Lounge" class="img-fluid">
                 </a>
               </div>
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="">
-                <a href="images/img_1.jpg" data-fancybox="gallery">
-                  <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+                <a href="images/Kitchen View.jpg" data-fancybox="gallery">
+                  <img src="images/Kitchen View.jpg" alt="Kitchen View" class="img-fluid">
                 </a>
               </div>
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <a href="images/img_2.jpg" data-fancybox="gallery">
-                  <img src="images/img_2.jpg" alt="Image" class="img-fluid">
+                <a href="images/Laundry.jpg" data-fancybox="gallery">
+                  <img src="images/Laundry.jpg" alt="Laundry Services" class="img-fluid">
                 </a>
               </div>
             </div>
@@ -145,15 +145,15 @@
         
 
     
-        <div class="untree_co--site-section py-5 bg-body-darker cta">
+        <!-- <div class="untree_co--site-section py-5 bg-body-darker cta">
           <div class="container">
             <div class="row">
               <div class="col-12 text-center">
-                <h3 class="m-0 p-0">If you have any special requests, please feel free to call us. <a href="tel:+2348000000000">+234 800 000 0000</a></h3>
+                <h3 class="m-0 p-0">If you have any special requests, please feel free to call us. <a href="tel:+2347017834528">+234 701 783 4528</a></h3>
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </main>
       <?php include 'includes/footer.php'; ?>

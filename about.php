@@ -13,8 +13,8 @@
   <meta name="author" content="Untree.co">
   <link rel="shortcut icon" href="favicon.png">
 
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
+  <meta name="description" content="Learn more about Trend's Place Hotel & Suites Yenagoa, Bayelsa." />
+  <meta name="keywords" content="hotel, Yenagoa, Bayelsa, luxury hotel, Trend's Place" />
 
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500i,700|Roboto:300,400,500,700&display=swap" rel="stylesheet">
 
@@ -45,14 +45,14 @@
       <main class="untree_co--site-main">
         
 
-        <div class="untree_co--site-hero inner-page bg-light" style="background-color: #fff;">
+        <div class="untree_co--site-hero inner-page bg-light" style="background-image: url('images/Lobby Waiting Are 2.jpg'); background-size: cover; background-position: center;">
           <div class="container">
             <div class="row align-items-center">
               <div class="col-md-9">
                 <div class="site-hero-contents" data-aos="fade-up">
                   <h1 class="hero-heading">About Trend's Place</h1>
                   <div class="sub-text w-75">
-                    <p>Providing a "home away from home" experience for travelers seeking solace and relaxation in the heart of Abuja.</p>
+                    <!-- <p>Providing a "home away from home" experience for travelers seeking solace and relaxation in Yenagoa, Bayelsa.</p> -->
                   </div>
                 </div>
               </div>
@@ -84,7 +84,7 @@
                         <p>We are committed to making every guest feel truly at home, offering a blend of modern elegance and functional comfort in all our accommodations.</p>
                       </div>
                       <div class="col-md-6"  data-aos="fade-up">
-                        <p>Whether you're visiting for business or leisure, our world-class amenities—from our rooftop bar to our full-fitness GYM—are designed to enhance your stay and provide an unforgettable experience in Abuja.</p>
+                        <p>Whether you're visiting for business or leisure, our world-class amenities—from our rooftop bar to our full-fitness GYM—are designed to enhance your stay and provide an unforgettable experience in Yenagoa, Bayelsa.</p>
                       </div>
                     </div>
                   </div>
@@ -120,15 +120,15 @@
           </div>
         </div>
 
-        <div class="untree_co--site-section py-5 bg-body-darker cta">
+        <!-- <div class="untree_co--site-section py-5 bg-body-darker cta">
           <div class="container">
             <div class="row">
               <div class="col-12 text-center">
-                <h3 class="m-0 p-0">If you have any special requests, please feel free to call us. <a href="tel:+2348000000000">+234 800 000 0000</a></h3>
+                <h3 class="m-0 p-0">If you have any special requests, please feel free to call us. <a href="tel:+2347017834528">+234 701 783 4528</a></h3>
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </main>
       <?php include 'includes/footer.php'; ?>

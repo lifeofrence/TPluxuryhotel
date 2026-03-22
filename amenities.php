@@ -43,7 +43,7 @@
       <main class="site-untree_co--main">
         
 
-        <div class="untree_co--site-hero inner-page" style="background-image: url('images/slider_2.jpg')">
+        <div class="untree_co--site-hero inner-page" style="background-image: url('images/Buffet Area.jpg')">
           <div class="container">
             <div class="row align-items-center justify-content-center">
               <div class="col-md-7 text-center">
@@ -66,69 +66,70 @@
           
             <div class="row custom-row-02192 align-items-stretch">
               <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
-                <div class="media-29191 text-center h-100">
-                  <div class="media-29191-icon">
-                    <img src="images/svg/parking.svg" alt="Icon" class="img-fluid">
+                <div class="media-29191 text-center h-100 p-0 overflow-hidden">
+                  <div class="px-4 py-4 pt-5">
+                    <div class="media-29191-icon mb-4">
+                      <img src="images/svg/parking.svg" alt="Icon" class="img-fluid" style="width: 50px;">
+                    </div>
+                    <h3>24 Hours Power Supply</h3>
+                    <p>Reliable and uninterrupted power supply 24/7 to ensure a seamless experience for all our guests.</p>
                   </div>
-                  <h3>Free Airport Shuttle</h3>
-                  <p>Complimentary shuttle service to and from Nnamdi Azikiwe International Airport for all our guests.</p>
-                  <p><p><a href="#" class="readmore reverse">Read More</a></p></p>
                 </div>
               </div>
               
               <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
-                <div class="media-29191 text-center h-100">
-                  <div class="media-29191-icon">
-                    <img src="images/svg/internet.svg" alt="Icon" class="img-fluid">
+                <div class="media-29191 text-center h-100 p-0 overflow-hidden">
+                  <div class="px-4 py-4 pt-5">
+                    <div class="media-29191-icon mb-4">
+                      <img src="images/svg/wifi.svg" alt="Icon" class="img-fluid" style="width: 50px;">
+                    </div>
+                    <h3>Free Wi-Fi</h3>
+                    <p>Stay connected with our high-speed complimentary Wi-Fi available throughout the hotel premises.</p>
                   </div>
-                  <h3>24/7 Security & CCTV</h3>
-                  <p>Your safety is our priority. We have round-the-clock security and comprehensive CCTV monitoring in all areas.</p>
-                  <p><p><a href="#" class="readmore reverse">Read More</a></p></p>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
-                <div class="media-29191 text-center h-100">
-                  <div class="media-29191-icon">
-                    <img src="images/svg/wifi.svg" alt="Icon" class="img-fluid">
-                  </div>
-                  <h3>Complimentary WiFi in public areas</h3>
-                  <p>A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.</p>
-                  <p><p><a href="#" class="readmore reverse">Read More</a></p></p>
-                </div>
-              </div>
-              
-              <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
-                <div class="media-29191 text-center h-100">
-                  <div class="media-29191-icon">
-                    <img src="images/svg/elevator.svg" alt="Icon" class="img-fluid">
-                  </div>
-                  <h3>Rooftop Bar</h3>
-                  <p>Relax and unwind at our rooftop bar, offering premium drinks and stunning views of the city skyline.</p>
-                  <p><p><a href="#" class="readmore reverse">Read More</a></p></p>
-                </div>
-              </div>
-              
-              <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
-                <div class="media-29191 text-center h-100">
-                  <div class="media-29191-icon">
-                    <img src="images/svg/partners.svg" alt="Icon" class="img-fluid">
-                  </div>
 
-                  <h3>Event Spaces</h3>
-                  <p>Modern and well-equipped facilities for your conferences, meetings, weddings, and social gatherings.</p>
-                  <p><p><a href="#" class="readmore reverse">Read More</a></p></p>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
-                <div class="media-29191 text-center h-100">
-                  <div class="media-29191-icon">
-                    <img src="images/svg/washing-machine.svg" alt="Icon" class="img-fluid">
+              <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="300">
+                <div class="media-29191 text-center h-100 p-0 overflow-hidden">
+                  <img src="images/Gym.jpg" alt="Gym" class="img-fluid mb-4" style="height: 200px; width: 100%; object-fit: cover;">
+                  <div class="px-4 pb-4">
+                    <h3>Gym</h3>
+                    <p>Maintain your fitness routine in our state-of-the-art gym equipped with modern exercise machines.</p>
                   </div>
-                  <h3>Laundry and Valet service</h3>
-                  <p>A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.</p>
-                  <p><p><a href="#" class="readmore reverse">Read More</a></p></p>
                 </div>
               </div>
+              
+              <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="400">
+                <div class="media-29191 text-center h-100 p-0 overflow-hidden">
+                  <img src="images/Football Area.jpg" alt="Football Viewing Spot" class="img-fluid mb-4" style="height: 200px; width: 100%; object-fit: cover;">
+                  <div class="px-4 pb-4">
+                    <h3>Football Viewing Spot</h3>
+                    <p>Never miss a match! Join fellow fans at our dedicated football viewing spot for an exciting atmosphere.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="500">
+                <div class="media-29191 text-center h-100 p-0 overflow-hidden">
+                  <img src="images/Snokker Area.jpg" alt="Snooker Board" class="img-fluid mb-4" style="height: 200px; width: 100%; object-fit: cover;">
+                  <div class="px-4 pb-4">
+                    <h3>Snooker Board</h3>
+                    <p>Unwind and enjoy a friendly game of snooker at our recreational area.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="600">
+                <div class="media-29191 text-center h-100 p-0 overflow-hidden">
+                  <img src="images/Rooftop Bar.jpg" alt="Rooftop Restaurant and Bar" class="img-fluid mb-4" style="height: 200px; width: 100%; object-fit: cover;">
+                  <div class="px-4 pb-4">
+                    <h3>Roof top Restaurant and Bar</h3>
+                    <p>Experience exquisite dining and premium drinks at our rooftop restaurant and bar with a stunning view.</p>
+                  </div>
+                </div>
+              </div>
+
+             
 
             </div>
           </div>
@@ -138,15 +139,15 @@
         
 
     
-        <div class="untree_co--site-section py-5 bg-body-darker cta">
+        <!-- <div class="untree_co--site-section py-5 bg-body-darker cta">
           <div class="container">
             <div class="row">
               <div class="col-12 text-center">
-                <h3 class="m-0 p-0">If you have any special requests, please feel free to call us. <a href="tel:+2348000000000">+234 800 000 0000</a></h3>
+                <h3 class="m-0 p-0">If you have any special requests, please feel free to call us. <a href="tel:+2347017834528">+234 701 783 4528</a></h3>
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
 
       </main>

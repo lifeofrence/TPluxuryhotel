@@ -45,14 +45,14 @@
       <main class="untree_co--site-main">
         
 
-        <div class="untree_co--site-hero inner-page bg-light" style="background-color: #fff;">
+        <div class="untree_co--site-hero inner-page bg-light" style="background-image: url('images/Walk Way Ground Fllor.jpg'); background-size: cover; background-position: center;">
           <div class="container">
             <div class="row align-items-center">
               <div class="col-md-9">
                 <div class="site-hero-contents" data-aos="fade-up">
                   <h1 class="hero-heading">Contact Us</h1>
                   <div class="sub-text w-75">
-                    <p>We are here to assist you. Reach out to us for bookings, inquiries, or special requests.</p>
+                    <!-- <p>We are here to assist you. Reach out to us for bookings, inquiries, or special requests.</p> -->
                   </div>
                 </div>
               </div>
@@ -69,56 +69,76 @@
                 </div>
                 <div class="col-md-6 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay="100">
                   
-                  <form action="#">
+                  <form action="process_contact.php" method="POST">
+                    <?php if (isset($_GET['message'])): ?>
+                    <div class="alert alert-success mb-4" role="alert">
+                      <?php echo htmlspecialchars($_GET['message']); ?>
+                    </div>
+                    <?php endif; ?>
+                    <?php if (isset($_GET['error'])): ?>
+                    <div class="alert alert-danger mb-4" role="alert">
+                      <?php echo htmlspecialchars($_GET['error']); ?>
+                    </div>
+                    <?php endif; ?>
+
                     <div class="form-group">
                       <label for="name">Your Name *</label>
-                      <input type="text" class="form-control" id="name">
+                      <input type="text" name="name" class="form-control" id="name" required>
                     </div>
                     <div class="form-group">
-                      <label for="email2">Your Email *</label>
-                      <input type="text" class="form-control" id="email2">
+                      <label for="email">Your Email *</label>
+                      <input type="email" name="email" class="form-control" id="email" required>
                     </div>
                     <div class="form-group">
-                      <label for="subject">Subject</label>
-                      <input type="text" class="form-control" id="subject">
+                      <label for="phone">Phone Number</label>
+                      <input type="text" name="phone" class="form-control" id="phone">
+                    </div>
+                    <div class="form-group">
+                      <label for="subject">Subject *</label>
+                      <select name="subject" id="subject" class="form-control" required>
+                        <option value="general">General Inquiry</option>
+                        <option value="reservation">Room Reservation</option>
+                        <option value="event">Event Inquiry</option>
+                        <option value="feedback">Feedback</option>
+                      </select>
                     </div>
                     <div class="form-group">
                       <label for="message">Message *</label>
-                      <textarea name="message" class="form-control" id="message" cols="30" rows="10"></textarea>
+                      <textarea name="message" class="form-control" id="message" cols="30" rows="10" required></textarea>
                     </div>
                     <div class="form-group">
-                      <input type="submit" value="Send" class="btn btn-black px-5 text-white">
+                      <input type="submit" value="Send Message" class="btn btn-black px-5 text-white">
                     </div>
                   </form>
                 </div>
                 <div class="col-md-4 ml-auto"  data-aos="fade-up" data-aos-delay="200">
                   <div class="media-29190">
                     <span class="label">Email</span>
-                    <p><a href="mailto:info@trendsplacehotelandsuites.com">info@trendsplacehotelandsuites.com</a></p>
+                    <p><a href="mailto:info.Bayelsa@trendsplacehotelandsuites.com">info.Bayelsa@trendsplacehotelandsuites.com</a></p>
                   </div>
                   <div class="media-29190">
                     <span class="label">Phone</span>
-                    <p><a href="tel:+2348000000000">+234 800 000 0000</a></p>
+                    <p><a href="tel:+2347017834528">+234 701 783 4528</a></p>
                   </div>
                   <div class="media-29190">
                     <span class="label">Address</span>
-                    <p>KM 25 Airport Road, ASO Lugbe, Abuja, Nigeria</p>
+                    <p>10 Prosco road, Yenagoa, Bayelsa</p>
                   </div>
                   <div class="media-29190">
                     <span class="label">Social</span>
                     <ul class="icons-top icons-dark">
-                      <li>
+                      <!-- <li>
                         <a href="#"><span class="icon-facebook"></span></a>
+                      </li> -->
+                      <li>
+                        <a href="https://www.tiktok.com/@trends.place.bayelsa"><span class="icon-play"></span></a>
                       </li>
                       <li>
-                        <a href="#"><span class="icon-twitter"></span></a>
+                        <a href="https://www.instagram.com/trendsplacebayelsa"><span class="icon-instagram"></span></a>
                       </li>
-                      <li>
-                        <a href="#"><span class="icon-instagram"></span></a>
-                      </li>
-                      <li>
+                      <!-- <li>
                         <a href="#"><span class="icon-tripadvisor"></span></a>
-                      </li>
+                      </li> -->
                     </ul>
                   </div>
                 </div>
@@ -128,15 +148,15 @@
           </div>
         </div>
 
-        <div class="untree_co--site-section py-5 bg-body-darker cta">
+        <!-- <div class="untree_co--site-section py-5 bg-body-darker cta">
           <div class="container">
             <div class="row">
               <div class="col-12 text-center">
-                <h3 class="m-0 p-0">If you have any special requests, please feel free to call us. <a href="tel:+2348000000000">+234 800 000 0000</a></h3>
+                <h3 class="m-0 p-0">If you have any special requests, please feel free to call us. <a href="tel:+2347017834528">+234 701 783 4528</a></h3>
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </main>
       <?php include 'includes/footer.php'; ?>
