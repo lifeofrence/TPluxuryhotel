@@ -2054,3 +2054,190 @@ footer .form-subscribe .form-control:active, footer .form-subscribe .form-contro
     height: 45px;
   }
 }
+
+/* --- Custom Mobile Responsive Fixes --- */
+@media (max-width: 767px) {
+    /* Fix Hero Heading */
+    .untree_co--site-hero .site-hero-contents .hero-heading,
+    .untree_co--site-hero.inner-page .site-hero-contents .hero-heading {
+        font-size: 2.2rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .untree_co--site-hero .site-hero-contents .sub-text {
+        font-size: 1.1rem !important;
+        width: 100% !important;
+    }
+
+    /* Fix Featured Rooms Layout */
+    .suite-wrap {
+        margin-bottom: 50px !important;
+    }
+
+    .suite-wrap .suite,
+    .suite-wrap.overlap-image-1 .suite,
+    .suite-wrap.overlap-image-2 .suite {
+        width: 100% !important;
+        float: none !important;
+        margin-bottom: 30px !important;
+    }
+
+    .suite-wrap .suite-contents,
+    .suite-wrap.overlap-image-1 .suite-contents,
+    .suite-wrap.overlap-image-2 .suite-contents {
+        width: 100% !important;
+        float: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 0 15px !important;
+        text-align: center !important;
+    }
+
+    .suite-wrap .suite-contents .suite-title,
+    .suite-wrap.overlap-image-1 .suite-contents .suite-title,
+    .suite-wrap.overlap-image-2 .suite-contents .suite-title {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+        margin-top: 20px !important;
+    }
+
+    /* Fix Image Stacks */
+    .image-stack {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        position: relative !important;
+    }
+
+    .suite-wrap.overlap-image-1 .suite .image-stack .image-stack-item.image-stack-item-top,
+    .suite-wrap.overlap-image-2 .suite .image-stack .image-stack-item.image-stack-item-top {
+        width: 80% !important;
+        position: relative !important;
+        margin: 0 auto !important;
+        float: none !important;
+        z-index: 1 !important;
+    }
+
+    .suite-wrap.overlap-image-1 .suite .image-stack .image-stack-item.image-stack-item-bottom,
+    .suite-wrap.overlap-image-2 .suite .image-stack .image-stack-item.image-stack-item-bottom {
+        width: 80% !important;
+        margin: -30% auto 0 !important; /* Overlap effect for mobile */
+        float: none !important;
+        position: relative !important;
+        z-index: 2 !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    /* Fix General Sections */
+    .section-heading h3 {
+        font-size: 1.8rem !important;
+    }
+
+    .untree_co--site-section {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+}
+
+/* Fix for very small devices */
+@media (max-width: 400px) {
+    .untree_co--site-hero .site-hero-contents .hero-heading {
+        font-size: 1.8rem !important;
+    }
+}
+
+/* --- Extra Mobile Responsive Fixes (Round 2) --- */
+@media (max-width: 991.98px) {
+    .untree_co--site-logo img {
+        max-width: 150px !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* Prevent horizontal scroll */
+    body, html {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Fix custom rows that cause overflow */
+    .custom-row-02192 {
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+    
+    .custom-row-02192 > .col,
+    .custom-row-02192 > [class*="col-"] {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+
+    /* Force all sections to stack naturally */
+    .untree_co--site-section {
+        float: none !important;
+        display: block !important;
+        width: 100% !important;
+    }
+
+    /* Fix Owl Carousel overlap issues */
+    .owl-hero {
+        height: auto !important;
+        min-height: 400px !important;
+    }
+    
+    .untree_co--site-hero {
+        min-height: 400px !important;
+        height: auto !important;
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+    }
+
+    /* Fix text line heights (resolves overlapping words) */
+    p, h1, h2, h3, h4, h5, h6, span {
+        line-height: normal !important;
+    }
+    
+    .hero-heading span, .hero-heading span span {
+        line-height: 1.2 !important;
+        display: inline !important;
+        transform: none !important;
+    }
+
+    /* Ensure WhatsApp button is accessible but not blocking */
+    .whatsapp-float {
+        width: 50px !important;
+        height: 50px !important;
+        bottom: 20px !important;
+        right: 20px !important;
+    }
+}
+
+/* --- Disable Parallax Translations on Mobile to prevent overflow --- */
+@media (max-width: 991.98px) {
+    [data-jarallax-element] {
+        transform: none !important;
+        transition: none !important;
+    }
+    
+    .img-wrap {
+        height: 300px !important;
+        width: 100% !important;
+    }
+    
+    .room-animate .col-md-7,
+    .room-animate .col-md-5 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .display-4.heading {
+        font-size: 2.5rem !important;
+    }
+}
