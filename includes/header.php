@@ -23,9 +23,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <div class="site-nav-ul-wrap text-center d-none d-lg-block">
       <ul class="site-nav-ul js-clone-nav">
         <li class="<?php echo $current_page == 'index.php' ? 'active' : ''; ?>"><a href="index.php">Home</a></li>
-        <li class="has-children <?php echo $current_page == 'rooms.php' ? 'active' : ''; ?>">
+        <li class="<?php echo $current_page == 'rooms.php' ? 'active' : ''; ?>">
           <a href="rooms.php">Rooms</a>
-         
         </li>
         <li class="<?php echo $current_page == 'amenities.php' ? 'active' : ''; ?>"><a href="amenities.php">Amenities</a></li>
         <li class="<?php echo $current_page == 'gallery.php' ? 'active' : ''; ?>"><a href="gallery.php">Gallery</a></li>

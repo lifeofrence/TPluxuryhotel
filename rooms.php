@@ -33,7 +33,7 @@
     
     <div id="untree_co--overlayer"></div>
     <div class="loader">
-      <div class="loader-logo"><img loading="lazy" src="images/logotp.png" alt="Trend's Place Logo"></div>
+      <div class="loader-logo"><img src="images/logotp.png" alt="Trend's Place Logo"></div>
     </div>
     
     <?php include 'includes/header.php'; ?>
@@ -113,8 +113,8 @@
                             <li>King size bed</li>
                             <li>Smart TV with satellite channels</li>
                             <li>High-speed WiFi</li>
-                            <li>Mini-bar and Coffee maker</li>
-                            <li>Private Balcony</li>
+                          
+                         
                           </ul>
                         </div>
                       </div>

@@ -259,7 +259,7 @@
             </div>
           
             <div class="row custom-row-02192 align-items-stretch">
-              <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+              <!-- <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
                 <div class="media-29191 text-center h-100 p-0 overflow-hidden">
                   <div class="px-4 py-4 pt-5">
                     <div class="media-29191-icon mb-4">
@@ -269,9 +269,9 @@
                     <p>Reliable and uninterrupted power supply 24/7 to ensure a seamless experience for all our guests.</p>
                   </div>
                 </div>
-              </div>
+              </div> -->
               
-              <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
+              <!-- <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
                 <div class="media-29191 text-center h-100 p-0 overflow-hidden">
                   <div class="px-4 py-4 pt-5">
                     <div class="media-29191-icon mb-4">
@@ -281,7 +281,7 @@
                     <p>Stay connected with our high-speed complimentary Wi-Fi available throughout the hotel premises.</p>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
               <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="300">
                 <div class="media-29191 text-center h-100 p-0 overflow-hidden">
