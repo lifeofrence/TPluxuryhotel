@@ -87,7 +87,7 @@
 
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/2347017834528" class="whatsapp-float" target="_blank">
-  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+  <img loading="lazy" src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
   <span> Support</span>
 </a>
 

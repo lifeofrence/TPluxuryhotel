@@ -18,7 +18,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 <nav class="untree_co--site-nav js-sticky-nav <?php echo isset($headerClass) ? $headerClass : ''; ?>" aria-label="Site Navigation">
   <div class="container d-flex align-items-center">
     <a href="index.php" class="untree_co--site-logo navbar-logo">
-      <img src="images/logo.png" alt="Trend's Place Logo">
+      <img loading="lazy" src="images/logo.png" alt="Trend's Place Logo">
     </a>
     <div class="site-nav-ul-wrap text-center d-none d-lg-block">
       <ul class="site-nav-ul js-clone-nav">

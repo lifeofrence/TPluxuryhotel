@@ -33,7 +33,7 @@
 
     <div id="untree_co--overlayer"></div>
     <div class="loader">
-      <div class="loader-logo"><img src="images/logotp.png" alt="Trend's Place Logo"></div>
+      <div class="loader-logo"><img loading="lazy" src="images/logotp.png" alt="Trend's Place Logo"></div>
     </div>
 
     <?php include 'includes/header.php'; ?>
@@ -106,11 +106,11 @@
                 <div class="image-stack">
                   <div class="image-stack-item image-stack-item-top" data-jarallax-element="-50">
                     <div class="overlay"></div>
-                    <img src="images/Amabassadorial Sitting Room.jpg" alt="Ambassadorial Sitting Room" class="img-fluid pic1">
+                    <img loading="lazy" src="images/Amabassadorial Sitting Room.jpg" alt="Ambassadorial Sitting Room" class="img-fluid pic1">
                   </div>
                   <div class="image-stack-item image-stack-item-bottom">
                     <div class="overlay"></div>
-                    <img src="images/Ambassadorial Suite.jpg" alt="Ambassadorial Suite Room" class="img-fluid pic2">
+                    <img loading="lazy" src="images/Ambassadorial Suite.jpg" alt="Ambassadorial Suite Room" class="img-fluid pic2">
                   </div>
                 </div>
               </div> <!-- .suite -->
@@ -130,11 +130,11 @@
                 <div class="image-stack">
                   <div class="image-stack-item image-stack-item-top">
                     <div class="overlay"></div>
-                    <img src="images/Executive Suite.jpg" alt="Executive Suite" class="img-fluid pic1">
+                    <img loading="lazy" src="images/Executive Suite.jpg" alt="Executive Suite" class="img-fluid pic1">
                   </div>
                   <div class="image-stack-item image-stack-item-bottom" data-jarallax-element="-50">
                     <div class="overlay"></div>
-                    <img src="images/Executive Suite 2.jpg" alt="Executive Suite Interior" class="img-fluid pic2">
+                    <img loading="lazy" src="images/Executive Suite 2.jpg" alt="Executive Suite Interior" class="img-fluid pic2">
                   </div>
                 </div>
               </div>
@@ -155,11 +155,11 @@
                   <div class="image-stack">
                     <div class="image-stack-item image-stack-item-top" data-jarallax-element="-50">
                       <div class="overlay"></div>
-                      <img src="images/Ambassadorial Suite 2.jpg" alt="Grand Royale Suite" class="img-fluid pic1">
+                      <img loading="lazy" src="images/Ambassadorial Suite 2.jpg" alt="Grand Royale Suite" class="img-fluid pic1">
                     </div>
                     <div class="image-stack-item image-stack-item-bottom">
                       <div class="overlay"></div>
-                      <img src="images/Amabassadorial Sitting Room 2.jpg" alt="Grand Royale Suite Room" class="img-fluid pic2">
+                      <img loading="lazy" src="images/Amabassadorial Sitting Room 2.jpg" alt="Grand Royale Suite Room" class="img-fluid pic2">
                     </div>
                   </div>
                 </div>
@@ -177,11 +177,11 @@
                   <div class="image-stack">
                     <div class="image-stack-item image-stack-item-top">
                       <div class="overlay"></div>
-                      <img src="images/Business Royal 1.jpg" alt="Business Royale" class="img-fluid pic1">
+                      <img loading="lazy" src="images/Business Royal 1.jpg" alt="Business Royale" class="img-fluid pic1">
                     </div>
                     <div class="image-stack-item image-stack-item-bottom" data-jarallax-element="-50">
                       <div class="overlay"></div>
-                      <img src="images/Vip Lounge.jpg" alt="Business Royale Interior" class="img-fluid pic2">
+                      <img loading="lazy" src="images/Vip Lounge.jpg" alt="Business Royale Interior" class="img-fluid pic2">
                     </div>
                   </div>
                 </div>
@@ -199,11 +199,11 @@
                   <div class="image-stack">
                     <div class="image-stack-item image-stack-item-top" data-jarallax-element="-50">
                       <div class="overlay"></div>
-                      <img src="images/Standard Room 2.jpg" alt="Standard Room" class="img-fluid pic1">
+                      <img loading="lazy" src="images/Standard Room 2.jpg" alt="Standard Room" class="img-fluid pic1">
                     </div>
                     <div class="image-stack-item image-stack-item-bottom">
                       <div class="overlay"></div>
-                      <img src="images/Standard room.jpg" alt="Standard Room Interior" class="img-fluid pic2">
+                      <img loading="lazy" src="images/Standard room.jpg" alt="Standard Room Interior" class="img-fluid pic2">
                     </div>
                   </div>
                 </div>
@@ -221,11 +221,11 @@
                   <div class="image-stack">
                     <div class="image-stack-item image-stack-item-top">
                       <div class="overlay"></div>
-                      <img src="images/Studio Suite 3.jpg" alt="Studio Suite" class="img-fluid pic1">
+                      <img loading="lazy" src="images/Studio Suite 3.jpg" alt="Studio Suite" class="img-fluid pic1">
                     </div>
                     <div class="image-stack-item image-stack-item-bottom" data-jarallax-element="-50">
                       <div class="overlay"></div>
-                      <img src="images/Studio Suite.jpg" alt="Studio Suite Interior" class="img-fluid pic2">
+                      <img loading="lazy" src="images/Studio Suite.jpg" alt="Studio Suite Interior" class="img-fluid pic2">
                     </div>
                   </div>
                 </div>
@@ -263,7 +263,7 @@
                 <div class="media-29191 text-center h-100 p-0 overflow-hidden">
                   <div class="px-4 py-4 pt-5">
                     <div class="media-29191-icon mb-4">
-                      <img src="images/svg/parking.svg" alt="Icon" class="img-fluid" style="width: 50px;">
+                      <img loading="lazy" src="images/svg/parking.svg" alt="Icon" class="img-fluid" style="width: 50px;">
                     </div>
                     <h3>24 Hours Power Supply</h3>
                     <p>Reliable and uninterrupted power supply 24/7 to ensure a seamless experience for all our guests.</p>
@@ -275,7 +275,7 @@
                 <div class="media-29191 text-center h-100 p-0 overflow-hidden">
                   <div class="px-4 py-4 pt-5">
                     <div class="media-29191-icon mb-4">
-                      <img src="images/svg/wifi.svg" alt="Icon" class="img-fluid" style="width: 50px;">
+                      <img loading="lazy" src="images/svg/wifi.svg" alt="Icon" class="img-fluid" style="width: 50px;">
                     </div>
                     <h3>Free Wi-Fi</h3>
                     <p>Stay connected with our high-speed complimentary Wi-Fi available throughout the hotel premises.</p>
@@ -285,7 +285,7 @@
 
               <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="300">
                 <div class="media-29191 text-center h-100 p-0 overflow-hidden">
-                  <img src="images/Gym.jpg" alt="Gym" class="img-fluid mb-4" style="height: 200px; width: 100%; object-fit: cover;">
+                  <img loading="lazy" src="images/Gym.jpg" alt="Gym" class="img-fluid mb-4 amenity-img">
                   <div class="px-4 pb-4">
                     <h3>Gym</h3>
                     <p>Maintain your fitness routine in our state-of-the-art gym equipped with modern exercise machines.</p>
@@ -295,7 +295,7 @@
               
               <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="400">
                 <div class="media-29191 text-center h-100 p-0 overflow-hidden">
-                  <img src="images/Football Area.jpg" alt="Football Viewing Spot" class="img-fluid mb-4" style="height: 200px; width: 100%; object-fit: cover;">
+                  <img loading="lazy" src="images/Football Area.jpg" alt="Football Viewing Spot" class="img-fluid mb-4 amenity-img">
                   <div class="px-4 pb-4">
                     <h3>Football Viewing Spot</h3>
                     <p>Never miss a match! Join fellow fans at our dedicated football viewing spot for an exciting atmosphere.</p>
@@ -305,7 +305,7 @@
               
               <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="500">
                 <div class="media-29191 text-center h-100 p-0 overflow-hidden">
-                  <img src="images/Snokker Area.jpg" alt="Snooker Board" class="img-fluid mb-4" style="height: 200px; width: 100%; object-fit: cover;">
+                  <img loading="lazy" src="images/Snokker Area.jpg" alt="Snooker Board" class="img-fluid mb-4 amenity-img">
                   <div class="px-4 pb-4">
                     <h3>Snooker Board</h3>
                     <p>Unwind and enjoy a friendly game of snooker at our recreational area.</p>
@@ -315,16 +315,48 @@
 
               <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="600">
                 <div class="media-29191 text-center h-100 p-0 overflow-hidden">
-                  <img src="images/Rooftop Bar.jpg" alt="Rooftop Restaurant and Bar" class="img-fluid mb-4" style="height: 200px; width: 100%; object-fit: cover;">
+                  <img loading="lazy" src="images/Resturant.jpg" alt="Rooftop Restaurant" class="img-fluid mb-4 amenity-img">
                   <div class="px-4 pb-4">
-                    <h3>Roof top Restaurant and Bar</h3>
-                    <p>Experience exquisite dining and premium drinks at our rooftop restaurant and bar with a stunning view.</p>
+                    <h3>Rooftop Restaurant</h3>
+                    <p>Savor gourmet cuisines with a breathtaking view at our high-altitude dining space.</p>
                   </div>
                 </div>
               </div>
 
-             
+              <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="700">
+                <div class="media-29191 text-center h-100 p-0 overflow-hidden">
+                  <img loading="lazy" src="images/Vip Lounge.jpg" alt="Rooftop Lounge" class="img-fluid mb-4 amenity-img">
+                  <div class="px-4 pb-4">
+                    <h3>Rooftop Lounge</h3>
+                    <p>A sophisticated VIP space for relaxation and premium comfort above the city.</p>
+                  </div>
+                </div>
+              </div>
 
+              <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="800">
+                <div class="media-29191 text-center h-100 p-0 overflow-hidden">
+                  <img loading="lazy" src="images/Rooftop Bar.jpg" alt="Rooftop Bar" class="img-fluid mb-4 amenity-img">
+                  <div class="px-4 pb-4">
+                    <h3>Rooftop Bar</h3>
+                    <p>Chilled drinks and a vibrant atmosphere, perfect for evening socials under the stars.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <style>
+          .amenity-img {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+            transition: transform .3s ease;
+          }
+          .media-29191:hover .amenity-img {
+            transform: scale(1.05);
+          }
+        </style>
             </div>
           </div>
         </div>

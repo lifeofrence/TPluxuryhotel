@@ -34,7 +34,7 @@
     
     <div id="untree_co--overlayer"></div>
     <div class="loader">
-      <div class="loader-logo"><img src="images/logotp.png" alt="Trend's Place Logo"></div>
+      <div class="loader-logo"><img loading="lazy" src="images/logotp.png" alt="Trend's Place Logo"></div>
     </div>
 
     
@@ -104,37 +104,37 @@
             <div class="row gutter-2">
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="">
                 <a href="images/Resturant.jpg" data-fancybox="gallery">
-                  <img src="images/Resturant.jpg" alt="Restaurant/Dining Area" class="img-fluid">
+                  <img loading="lazy" src="images/Resturant.jpg" alt="Restaurant/Dining Area" class="img-fluid">
                 </a>
               </div>
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <a href="images/Gym.jpg" data-fancybox="gallery">
-                  <img src="images/Gym.jpg" alt="Gym" class="img-fluid">
+                  <img loading="lazy" src="images/Gym.jpg" alt="Gym" class="img-fluid">
                 </a>
               </div>
               <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                 <a href="images/Snokker Area.jpg" data-fancybox="gallery">
-                  <img src="images/Snokker Area.jpg" alt="Snooker Area" class="img-fluid">
+                  <img loading="lazy" src="images/Snokker Area.jpg" alt="Snooker Area" class="img-fluid">
                 </a>
               </div>
               <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                 <a href="images/Football Area.jpg" data-fancybox="gallery">
-                  <img src="images/Football Area.jpg" alt="Football Viewing Spot" class="img-fluid">
+                  <img loading="lazy" src="images/Football Area.jpg" alt="Football Viewing Spot" class="img-fluid">
                 </a>
               </div>
               <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                 <a href="images/Vip Lounge.jpg" data-fancybox="gallery">
-                  <img src="images/Vip Lounge.jpg" alt="VIP Lounge" class="img-fluid">
+                  <img loading="lazy" src="images/Vip Lounge.jpg" alt="VIP Lounge" class="img-fluid">
                 </a>
               </div>
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="">
                 <a href="images/Kitchen View.jpg" data-fancybox="gallery">
-                  <img src="images/Kitchen View.jpg" alt="Kitchen View" class="img-fluid">
+                  <img loading="lazy" src="images/Kitchen View.jpg" alt="Kitchen View" class="img-fluid">
                 </a>
               </div>
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <a href="images/Laundry.jpg" data-fancybox="gallery">
-                  <img src="images/Laundry.jpg" alt="Laundry Services" class="img-fluid">
+                  <img loading="lazy" src="images/Laundry.jpg" alt="Laundry Services" class="img-fluid">
                 </a>
               </div>
             </div>

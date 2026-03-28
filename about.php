@@ -34,7 +34,7 @@
     
     <div id="untree_co--overlayer"></div>
     <div class="loader">
-      <div class="loader-logo"><img src="images/logotp.png" alt="Trend's Place Logo"></div>
+      <div class="loader-logo"><img loading="lazy" src="images/logotp.png" alt="Trend's Place Logo"></div>
     </div>
 
     
@@ -72,7 +72,7 @@
             
             <div class="row no-gutters">
               <div class="col-md-4"  data-aos="fade-up">
-                 <img src="images/room_1_b.jpg" alt="Image" class="img-fluid" data-jarallax-element="-140">
+                 <img loading="lazy" src="images/room_1_b.jpg" alt="Image" class="img-fluid" data-jarallax-element="-140">
               </div>
               <div class="col-md-8">
                 <div class="row justify-content-center">
@@ -114,7 +114,7 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-                <img src="images/slider_2.jpg" alt="Image" class="img-fluid">
+                <img loading="lazy" src="images/slider_2.jpg" alt="Image" class="img-fluid">
               </div>
             </div>
           </div>

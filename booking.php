@@ -45,7 +45,7 @@
 
   <div id="untree_co--overlayer"></div>
   <div class="loader">
-    <div class="loader-logo"><img src="images/logotp.png" alt="Trend's Place Logo"></div>
+    <div class="loader-logo"><img loading="lazy" src="images/logotp.png" alt="Trend's Place Logo"></div>
   </div>
 
 
@@ -161,7 +161,7 @@
             </div>
             <div class="col-lg-5 ml-auto">
               <div class="quick-contact-item d-flex align-items-center mb-4" data-aos="fade-up" data-aos-delay="100">
-                <img src="images/Ambassadorial Suite 2.jpg" alt="Grand Royale Suite Preview" class="img-fluid mr-4" style="max-width: 150px;">
+                <img loading="lazy" src="images/Ambassadorial Suite 2.jpg" alt="Grand Royale Suite Preview" class="img-fluid mr-4" style="max-width: 150px;">
                 <div>
                   <h3 class="h5">Grand Royale Suite</h3>
                   <p>Elegant and spacious starting from ₦110,000.</p>
@@ -169,7 +169,7 @@
               </div>
 
               <div class="quick-contact-item d-flex align-items-center mb-4" data-aos="fade-up" data-aos-delay="200">
-                <img src="images/Amabassadorial Sitting Room 2.jpg" alt="Ambassadorial Suite Preview" class="img-fluid mr-4" style="max-width: 150px;">
+                <img loading="lazy" src="images/Amabassadorial Sitting Room 2.jpg" alt="Ambassadorial Suite Preview" class="img-fluid mr-4" style="max-width: 150px;">
                 <div>
                   <h3 class="h5">Ambassadorial Suite</h3>
                   <p>Our prestigious suite starting from ₦100,000.</p>
@@ -177,7 +177,7 @@
               </div>
 
               <div class="quick-contact-item d-flex align-items-center mb-4" data-aos="fade-up" data-aos-delay="300">
-                <img src="images/Business Royal 1.jpg" alt="Business Royale Preview" class="img-fluid mr-4" style="max-width: 150px;">
+                <img loading="lazy" src="images/Business Royal 1.jpg" alt="Business Royale Preview" class="img-fluid mr-4" style="max-width: 150px;">
                 <div>
                   <h3 class="h5">Business Royale</h3>
                   <p>Perfect for corporate stays starting from ₦90,000.</p>
@@ -185,7 +185,7 @@
               </div>
 
               <div class="quick-contact-item d-flex align-items-center mb-4" data-aos="fade-up" data-aos-delay="400">
-                <img src="images/Executive Suite.jpg" alt="Executive Suite Preview" class="img-fluid mr-4" style="max-width: 150px;">
+                <img loading="lazy" src="images/Executive Suite.jpg" alt="Executive Suite Preview" class="img-fluid mr-4" style="max-width: 150px;">
                 <div>
                   <h3 class="h5">Executive Suite</h3>
                   <p>Comfort and style for executives starting from ₦85,000.</p>
@@ -193,7 +193,7 @@
               </div>
 
               <div class="quick-contact-item d-flex align-items-center mb-4" data-aos="fade-up" data-aos-delay="500">
-                <img src="images/Standard Room 2.jpg" alt="Standard Room Preview" class="img-fluid mr-4" style="max-width: 150px;">
+                <img loading="lazy" src="images/Standard Room 2.jpg" alt="Standard Room Preview" class="img-fluid mr-4" style="max-width: 150px;">
                 <div>
                   <h3 class="h5">Standard Room</h3>
                   <p>Excellent value and comfort starting from ₦80,000.</p>
@@ -201,7 +201,7 @@
               </div>
 
               <div class="quick-contact-item d-flex align-items-center mb-4" data-aos="fade-up" data-aos-delay="600">
-                <img src="images/Studio Suite 3.jpg" alt="Studio Suite Preview" class="img-fluid mr-4" style="max-width: 150px;">
+                <img loading="lazy" src="images/Studio Suite 3.jpg" alt="Studio Suite Preview" class="img-fluid mr-4" style="max-width: 150px;">
                 <div>
                   <h3 class="h5">Studio Suite</h3>
                   <p>Cozy and functional space starting from ₦75,000.</p>
@@ -222,13 +222,13 @@
           </div>
           <div class="row gutter-2">
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-              <a href="images/slider_1.jpg" data-fancybox="gallery"><img src="images/slider_1.jpg" alt="Hotel Slider 1" class="img-fluid rounded"></a>
+              <a href="images/slider_1.jpg" data-fancybox="gallery"><img loading="lazy" src="images/slider_1.jpg" alt="Hotel Slider 1" class="img-fluid rounded"></a>
             </div>
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-              <a href="images/slider_2.jpg" data-fancybox="gallery"><img src="images/slider_2.jpg" alt="Hotel Slider 2" class="img-fluid rounded"></a>
+              <a href="images/slider_2.jpg" data-fancybox="gallery"><img loading="lazy" src="images/slider_2.jpg" alt="Hotel Slider 2" class="img-fluid rounded"></a>
             </div>
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-              <a href="images/room_1_a.jpg" data-fancybox="gallery"><img src="images/room_1_a.jpg" alt="Room 1 Preview" class="img-fluid rounded"></a>
+              <a href="images/room_1_a.jpg" data-fancybox="gallery"><img loading="lazy" src="images/room_1_a.jpg" alt="Room 1 Preview" class="img-fluid rounded"></a>
             </div>
           </div>
         </div>
