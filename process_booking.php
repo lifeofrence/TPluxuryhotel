@@ -4,161 +4,245 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 session_start();
 
-// Include PHPMailer - Adjust paths if necessary based on your project structure
-require_once 'PHPMailer/src/PHPMailer.php';
-require_once 'PHPMailer/src/SMTP.php';
-require_once 'PHPMailer/src/Exception.php';
-require_once 'config_smtp.php';
+// Include PHPMailer
+
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+require 'PHPMailer/src/Exception.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+
+
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
   try {
-    // Extract booking data
-    $fname = $_POST['fname'] ?? '';
-    $lname = $_POST['lname'] ?? '';
+    $name = $_POST['name'] ?? '';
     $email = $_POST['email'] ?? '';
     $phone = $_POST['phone'] ?? '';
-    $checkin = $_POST['checkin'] ?? '';
-    $checkout = $_POST['checkout'] ?? '';
-    $room_type = $_POST['room_type'] ?? '';
-    $nofroom = $_POST['nofroom'] ?? '1';
-    $adults = $_POST['adults'] ?? '1';
-    $message = $_POST['message'] ?? '';
+    $payment = $_POST['payment'] ?? '';
+    // Accept either hidden m/d/Y fields or raw yyyy-mm-dd inputs
+    $checkinRaw = $_POST['checkin'] ?? ($_POST['checkIn'] ?? '');
+    $checkoutRaw = $_POST['checkout'] ?? ($_POST['checkOut'] ?? '');
+    $guests = isset($_POST['guests']) ? intval($_POST['guests']) : 1;
+    $room = $_POST['room'] ?? ($_POST['roomType'] ?? '');
+    $nofroom = isset($_POST['nofroom']) ? intval($_POST['nofroom']) : 1;
+    $message = $_POST['message'] ?? ($_POST['requests'] ?? '');
+    $pricePerNight = isset($_POST['pricePerNight']) ? intval($_POST['pricePerNight']) : 0;
 
-    $fullname = $fname . ' ' . $lname;
-
-    // Validate required fields
-    if (empty($fname) || empty($lname) || empty($email) || empty($phone) || empty($checkin) || empty($checkout) || empty($room_type)) {
-      throw new Exception("Please fill in all required fields marked with *");
+    // Parse dates robustly: try m/d/Y first, then fallback to Y-m-d
+    $checkinDateTime = DateTime::createFromFormat('m/d/Y', $checkinRaw);
+    if (!$checkinDateTime) {
+      $checkinDateTime = DateTime::createFromFormat('Y-m-d', $checkinRaw);
+    }
+    $checkoutDateTime = DateTime::createFromFormat('m/d/Y', $checkoutRaw);
+    if (!$checkoutDateTime) {
+      $checkoutDateTime = DateTime::createFromFormat('Y-m-d', $checkoutRaw);
     }
 
-    // Validate email
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      throw new Exception("Invalid email address provided");
+    if (!$checkinDateTime || !$checkoutDateTime) {
+      throw new Exception("Invalid date format");
     }
 
-    // Email status tracker
-    $autoReplyEmailSent = false;
+    $checkinFormatted = $checkinDateTime->format('Y-m-d');
+    $checkoutFormatted = $checkoutDateTime->format('Y-m-d');
 
-    // 1. Auto-reply to Guest
-    $mailGuest = new PHPMailer(true);
+    $interval = $checkinDateTime->diff($checkoutDateTime);
+    $days = $interval->days;
+    $totalPrice = $days * $pricePerNight;
+
+
+    // $stmt = $con->prepare("INSERT INTO bookings (name, email, phone, payment, checkin, checkout, guests, room, message, total_price) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    // $stmt->execute([$name, $email, $phone, $payment, $checkinFormatted, $checkoutFormatted, $guests, $room, $message, $totalPrice]);
+
+    // Track email sending status
+    $clientEmailSent = false;
+
+    // Email to Client
+    $mailClient = new PHPMailer(true);
     try {
-      // Use central SMTP configuration
-      configureSMTP($mailGuest);
+      // $mailClient->isSMTP();
+      // $mailClient->Host = 'mail.caritonhotel.com';
+      // $mailClient->SMTPAuth = true;
+      // $mailClient->Username = 'bookings@caritonhotel.com';
+      // $mailClient->Password = 'YOUR_EMAIL_PASSWORD'; // Update this with actual password
+      // $mailClient->SMTPSecure = 'ssl';
+      // $mailClient->Port = 465;
 
-      $mailGuest->setFrom(CONTACT_EMAIL, "Trend's Place Hotel & Suites");
-      $mailGuest->addAddress($email, $fullname);
-      $mailGuest->Subject = "Booking Confirmation Request - Trend's Place Hotel & Suites";
-      $mailGuest->isHTML(true);
+      // For testing with Mailtrap
+      $mailClient->isSMTP();
+      $mailClient->Host = 'smtp.mailtrap.io';
+      $mailClient->SMTPAuth = true;
+      $mailClient->Username = 'c37ef4508c01e6';
+      $mailClient->Password = '25db67cf9f349e';
+      $mailClient->SMTPSecure = 'tls';
+      $mailClient->Port = 2525;
 
-      $guestContent = "
-      <html>
-        <body style='margin:0;padding:0;background:#f5f7fa;font-family:Arial, sans-serif;'>
-          <table role='presentation' width='100%' style='background:#f5f7fa; padding:20px;'>
-            <tr>
-              <td align='center'>
-                <table width='600' style='background:#ffffff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);'>
-                  <tr>
-                    <td style='background:#1a1a1a; color:#d4af37; padding:25px; border-radius:8px 8px 0 0;'>
-                      <h2 style='margin:0;'>Trend's Place Hotel & Suites</h2>
-                      <p style='margin:5px 0 0; color:#ffffff; opacity:0.8;'>Booking Request Received</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style='padding:30px; line-height:1.6; color:#333;'>
-                      <p>Dear <strong>$fullname</strong>,</p>
-                      <p>Thank you for choosing Trend's Place Hotel & Suites. We have received your booking request for a <strong>$room_type</strong>.</p>
-                      
-                      <div style='background:#f9f9f9; padding:20px; border-radius:5px; margin:20px 0;'>
-                        <h4 style='margin-top:0; border-bottom:1px solid #ddd; padding-bottom:10px;'>Reservation Summary</h4>
-                        <table width='100%'>
-                          <tr><td><strong>Check-in:</strong></td><td>$checkin</td></tr>
-                          <tr><td><strong>Check-out:</strong></td><td>$checkout</td></tr>
-                          <tr><td><strong>Room Type:</strong></td><td>$room_type</td></tr>
-                          <tr><td><strong>No. of Rooms:</strong></td><td>$nofroom</td></tr>
-                          <tr><td><strong>Adults:</strong></td><td>$adults</td></tr>
-                        </table>
+
+      $mailClient->setFrom('bookings@caritonhotel.com', 'Cariton Hotel');
+      $mailClient->addAddress($email, $name);
+      $mailClient->Subject = 'Booking Confirmation - Cariton Hotel';
+      $mailClient->isHTML(true);
+
+      $clientEmailContent = "
+    <html>
+      <body style='margin:0;padding:0;background:#f5f7fa;font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;'>
+        <table role='presentation' width='100%' cellpadding='0' cellspacing='0' style='background:#f5f7fa;'>
+          <tr>
+            <td align='center' style='padding:24px;'>
+              <table role='presentation' width='600' cellpadding='0' cellspacing='0' style='background:#ffffff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);'>
+                <tr>
+                  <td style='background:#1a1a1a;color:#d4af37;padding:20px 24px;'>
+                    <div style='font-size:20px;font-weight:600;'>Cariton Hotel</div>
+                    <div style='font-size:13px;opacity:.85; color:#ffffff;'>Booking Confirmation</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td style='padding:24px;color:#111827;'>
+                    <p style='margin:0 0 12px;'>Dear $name,</p>
+                    <p style='margin:0 0 20px;color:#374151;'>Thank you for choosing Cariton Hotel. Your booking has been confirmed. Here are your details:</p>
+                    <table width='100%' cellpadding='0' cellspacing='0' style='border-collapse:collapse;'>
+                      <tr><td style='padding:8px 0;color:#6b7280;'>Room Type</td><td style='padding:8px 0;text-align:right;font-weight:600;color:#111827;'>$room</td></tr>
+                      <tr><td style='padding:8px 0;color:#6b7280;'>Check-in</td><td style='padding:8px 0;text-align:right;font-weight:600;color:#111827;'>$checkinFormatted</td></tr>
+                      <tr><td style='padding:8px 0;color:#6b7280;'>Check-out</td><td style='padding:8px 0;text-align:right;font-weight:600;color:#111827;'>$checkoutFormatted</td></tr>
+                      <tr><td style='padding:8px 0;color:#6b7280;'>Guests</td><td style='padding:8px 0;text-align:right;font-weight:600;color:#111827;'>$guests</td></tr>
+                      <tr><td style='padding:8px 0;color:#6b7280;'>Number of Nights</td><td style='padding:8px 0;text-align:right;font-weight:600;color:#111827;'>$days</td></tr>
+                      <tr><td style='padding:8px 0;color:#6b7280;'>Payment Method</td><td style='padding:8px 0;text-align:right;font-weight:600;color:#111827;'>$payment</td></tr>
+                    </table>
+                    <div style='margin:20px 0;padding:16px;border:1px solid #e5e7eb;border-radius:8px;background:#f9fafb;'>
+                      <div style='display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;'>
+                        <span style='color:#6b7280;'>Rate / Night</span>
+                        <span style='font-weight:600;color:#111827;'>&#x20A6;$pricePerNight</span>
                       </div>
-                      
-                      <p>Our front desk team will review your request and contact you shortly at <strong>$phone</strong> to finalize the booking and discuss payment options.</p>
-                      <p>If you have any questions, please contact us at +234 701 783 4528 or reply to this email.</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style='background:#f1f1f1; padding:20px; text-align:center; font-size:12px; color:#666;'>
-                      Trend's Place Hotel & Suites | 10 Prosco road, Yenagoa, Bayelsa<br>
-                      Phone: +234 701 783 4528 | Email: <?php echo CONTACT_EMAIL; ?>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </body>
-      </html>";
+                      <div style='display:flex;justify-content:space-between;align-items:center;'>
+                        <span style='color:#6b7280;'>Total</span>
+                        <span style='font-size:18px;font-weight:700;color:#111827;'>&#x20A6;$totalPrice</span>
+                      </div>
+                    </div>
+                    <p style='margin:0 0 12px;color:#374151;'>We look forward to welcoming you to Cariton Hotel!</p>
+                    <p style='margin:0;color:#6b7280;font-size:13px;'>If you have any questions or need to modify your booking, please reply to this email or call us at +234 704 473 8132.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style='background:#f9fafb;padding:16px;text-align:center;color:#6b7280;font-size:12px;'>
+                    <strong>Cariton Hotel</strong><br>
+                    3 Tex Olawale Street, Lagos, Nigeria<br>
+                    Phone: +234 704 473 8132 | Email: info@caritonhotel.com
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </body>
+    </html>";
 
-      $mailGuest->Body = $guestContent;
-      $mailGuest->send();
-      $autoReplyEmailSent = true;
+      $mailClient->Body = $clientEmailContent;
+      $mailClient->send();
+      $clientEmailSent = true;
     } catch (Exception $e) {
-      error_log("Guest Auto-reply error: " . $mailGuest->ErrorInfo);
+      error_log('Error sending client email: ' . $mailClient->ErrorInfo);
+      // Continue to try sending admin email even if client email fails
     }
 
-    // 2. Admin Notification
+    // Email to Admin
     $mailAdmin = new PHPMailer(true);
     try {
-      // Use central SMTP configuration
-      configureSMTP($mailAdmin);
+      // $mailAdmin->isSMTP();
+      // $mailAdmin->Host = 'mail.caritonhotel.com';
+      // $mailAdmin->SMTPAuth = true;
+      // $mailAdmin->Username = 'bookings@caritonhotel.com';
+      // $mailAdmin->Password = 'YOUR_EMAIL_PASSWORD'; // Update this with actual password
+      // $mailAdmin->SMTPSecure = 'ssl';
+      // $mailAdmin->Port = 465;
 
-      $mailAdmin->setFrom(WEBSITE_SENDER_EMAIL, "Website Booking");
-      $mailAdmin->addAddress(ADMIN_RECIPIENT_EMAIL, ADMIN_RECIPIENT_NAME);
-      $mailAdmin->Subject = "New Website Booking Request - $room_type from $fullname";
+      // For testing with Mailtrap
+      $mailAdmin->isSMTP();
+      $mailAdmin->Host = 'smtp.mailtrap.io';
+      $mailAdmin->SMTPAuth = true;
+      $mailAdmin->Username = 'c37ef4508c01e6';
+      $mailAdmin->Password = '25db67cf9f349e';
+      $mailAdmin->SMTPSecure = 'tls';
+      $mailAdmin->Port = 2525;
+
+
+      $mailAdmin->setFrom('bookings@caritonhotel.com', 'Cariton Hotel');
+      $mailAdmin->addAddress('info@caritonhotel.com', 'Cariton Hotel Admin'); // Admin email
+      $mailAdmin->Subject = 'New Booking Received - Cariton Hotel';
       $mailAdmin->isHTML(true);
 
-      $adminContent = "
-      <html>
-        <body>
-          <h2>New Booking Request Received</h2>
-          <table border='1' cellpadding='10' style='border-collapse:collapse;'>
-            <tr><td><strong>Guest Name:</strong></td><td>$fullname</td></tr>
-            <tr><td><strong>Email:</strong></td><td>$email</td></tr>
-            <tr><td><strong>Phone:</strong></td><td>$phone</td></tr>
-            <tr><td><strong>Check-in:</strong></td><td>$checkin</td></tr>
-            <tr><td><strong>Check-out:</strong></td><td>$checkout</td></tr>
-            <tr><td><strong>Room Type:</strong></td><td>$room_type</td></tr>
-            <tr><td><strong>No. of Rooms:</strong></td><td>$nofroom</td></tr>
-            <tr><td><strong>Adults:</strong></td><td>$adults</td></tr>
-            <tr><td><strong>Special Requests:</strong></td><td>$message</td></tr>
-          </table>
-        </body>
-      </html>";
+      $adminEmailContent = "
+    <html>
+      <body style='margin:0;padding:0;background:#f5f7fa;font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;'>
+        <table role='presentation' width='100%' cellpadding='0' cellspacing='0' style='background:#f5f7fa;'>
+          <tr>
+            <td align='center' style='padding:24px;'>
+              <table role='presentation' width='600' cellpadding='0' cellspacing='0' style='background:#ffffff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);'>
+                <tr>
+                  <td style='background:#1a1a1a;color:#ffffff;padding:20px 24px;'>
+                    <div style='font-size:20px;font-weight:600;'>Cariton Hotel</div>
+                    <div style='font-size:13px;opacity:.85;'>New Booking Received</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td style='padding:24px;color:#111827;'>
+                    <p style='margin:0 0 16px;color:#374151;'>A new booking has been made:</p>
+                    <table width='100%' cellpadding='0' cellspacing='0' style='border-collapse:collapse;'>
+                      <tr><td style='padding:8px 0;color:#6b7280;'>Name</td><td style='padding:8px 0;text-align:right;font-weight:600;color:#111827;'>$name</td></tr>
+                      <tr><td style='padding:8px 0;color:#6b7280;'>Email</td><td style='padding:8px 0;text-align:right;font-weight:600;color:#111827;'>$email</td></tr>
+                      <tr><td style='padding:8px 0;color:#6b7280;'>Phone</td><td style='padding:8px 0;text-align:right;font-weight:600;color:#111827;'>$phone</td></tr>
+                      <tr><td style='padding:8px 0;color:#6b7280;'>Room Type</td><td style='padding:8px 0;text-align:right;font-weight:600;color:#111827;'>$room</td></tr>
+                      <tr><td style='padding:8px 0;color:#6b7280;'>Check-in</td><td style='padding:8px 0;text-align:right;font-weight:600;color:#111827;'>$checkinFormatted</td></tr>
+                      <tr><td style='padding:8px 0;color:#6b7280;'>Check-out</td><td style='padding:8px 0;text-align:right;font-weight:600;color:#111827;'>$checkoutFormatted</td></tr>
+                      <tr><td style='padding:8px 0;color:#6b7280;'>Guests</td><td style='padding:8px 0;text-align:right;font-weight:600;color:#111827;'>$guests</td></tr>
+                
+                      <tr><td style='padding:8px 0;color:#6b7280;'>Number of Nights</td><td style='padding:8px 0;text-align:right;font-weight:600;color:#111827;'>$days</td></tr>
+                      <tr><td style='padding:8px 0;color:#6b7280;'>Payment Method</td><td style='padding:8px 0;text-align:right;font-weight:600;color:#111827;'>$payment</td></tr>
+                      </table>
+                      <p style='margin:16px 0 0;color:#6b7280;font-size:13px;'><strong>Special requests:</strong> $message</p>
+                    <div style='margin:20px 0;padding:16px;border:1px solid #e5e7eb;border-radius:8px;background:#f9fafb;'>
+                      <div style='display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;'>
+                        <span style='color:#6b7280;'>Rate / Night</span>
+                        <span style='font-weight:600;color:#111827;'>&#x20A6;$pricePerNight</span>
+                      </div>
+                      <div style='display:flex;justify-content:space-between;align-items:center;'>
+                        <span style='color:#6b7280;'>Total</span>
+                        <span style='font-size:18px;font-weight:700;color:#111827;'>&#x20A6;$totalPrice</span>
+                      </div>
+                    </div>
+                    
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </body>
+    </html>";
 
-      $mailAdmin->Body = $adminContent;
+      $mailAdmin->Body = $adminEmailContent;
       $mailAdmin->send();
-      
-      // Redirect with success
-      header("Location: booking.php?status=success&message=" . urlencode("Booking request sent! We've sent a confirmation to $email"));
-      exit;
 
-    } catch (Exception $e) {
-      error_log("Admin Notification error: " . $mailAdmin->ErrorInfo);
-      // Still show success if auto-reply worked
-      if ($autoReplyEmailSent) {
-        header("Location: booking.php?status=success&message=" . urlencode("Booking request sent! We've sent a confirmation to $email"));
+      // Success - redirect with success message
+      if ($clientEmailSent) {
+        header("Location: booking.php?message=" . urlencode("Booking successful! Confirmation email has been sent to $email"));
       } else {
-        header("Location: booking.php?status=success&message=" . urlencode("Booking request received! Our team will contact you soon."));
+        header("Location: booking.php?message=" . urlencode("Booking received! We will contact you shortly to confirm."));
+      }
+      exit;
+    } catch (Exception $e) {
+      error_log('Error sending admin email: ' . $mailAdmin->ErrorInfo);
+      // Even if admin email fails, still show success to user if client email was sent
+      if ($clientEmailSent) {
+        header("Location: booking.php?message=" . urlencode("Booking successful! Confirmation email has been sent to $email (Admin notification failed)."));
+      } else {
+        header("Location: booking.php?message=" . urlencode("Booking received! We will contact you shortly to confirm (Email notifications failed)."));
       }
       exit;
     }
-
   } catch (Exception $e) {
-    error_log("Booking Process Error: " . $e->getMessage());
-    header("Location: booking.php?status=error&message=" . urlencode("Error: " . $e->getMessage()));
+    error_log("Booking Error: " . $e->getMessage());
+    header("Location: booking.php?error=" . urlencode("Booking failed: " . $e->getMessage()));
     exit;
   }
-} else {
-  header("Location: booking.php");
-  exit;
 }

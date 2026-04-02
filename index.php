@@ -1,9 +1,11 @@
-<!-- /*
+<?php
+/*
 * Template Name: LuxuryHotel
 * Template Author: Untree.co
 * Tempalte URI: https://untree.co/
 * License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
+*/
+?>
 <!doctype html>
 <html lang="en">
 
@@ -19,10 +21,15 @@
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500i,700|Roboto:300,400,500,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/vendor/icomoon/style.css">
-    <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/vendor/aos.css">
-    <link rel="stylesheet" href="css/vendor/animate.min.css">
-    <link rel="stylesheet" href="css/vendor/bootstrap.css">
+    <!-- Owl Carousel CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- AOS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <!-- Animate.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
@@ -30,12 +37,12 @@
     <title>Trend's Place Hotel & Suites | A home away from home</title>
   </head>
   <body>
-
+    
     <div id="untree_co--overlayer"></div>
     <div class="loader">
-      <div class="loader-logo"><img loading="lazy" src="images/logotp.png" alt="Trend's Place Logo"></div>
+      <div class="loader-logo"><img src="images/logo.png" alt="Trend's Place Logo"></div>
     </div>
-
+    
     <?php include 'includes/header.php'; ?>
 
     <div class="untree_co--site-wrap">
@@ -53,7 +60,7 @@
                     <h1 class="hero-heading">Trend's Place Hotel & Suites</h1>
                     <div class="sub-text">
                       <p>Providing a "home away from home" experience in Yenagoa, Bayelsa.</p>
-                      <p class="mt-5"><a href="booking.php" class="btn btn-black px-5 text-white">Book Now</a></p>
+                      <p class="mt-5"><a href="https://wa.me/2347017834528?text=Hello%2c%20I'd%20like%20to%20make%20a%20reservation" class="btn btn-black px-5 text-white" target="_blank">Book Now (WhatsApp)</a></p>
                     </div>
                   </div>
                 </div>
@@ -67,7 +74,7 @@
                 <div class="col-md-10">
                   <div class="site-hero-contents text-center" data-aos="fade-up">
                     <h1 class="hero-heading">Luxury & Comfort</h1>
-                    <p class="mt-5"><a href="booking.php" class="btn btn-black px-5 text-white">Book Now</a></p>
+                    <p class="mt-5"><a href="https://wa.me/2347017834528?text=Hello%2c%20I'd%20like%20to%20make%20a%20reservation" class="btn btn-black px-5 text-white" target="_blank">Book Now (WhatsApp)</a></p>
                   </div>
                 </div>
               </div>
@@ -80,7 +87,7 @@
                 <div class="col-md-10">
                   <div class="site-hero-contents text-center" data-aos="fade-up">
                     <h1 class="hero-heading">Away from the Hustle and Bustle of City Life</h1>
-                    <p class="mt-5"><a href="booking.php" class="btn btn-black px-5 text-white">Book Now</a></p>
+                    <p class="mt-5"><a href="https://wa.me/2347017834528?text=Hello%2c%20I'd%20like%20to%20make%20a%20reservation" class="btn btn-black px-5 text-white" target="_blank">Book Now (WhatsApp)</a></p>
                   </div>
                 </div>
               </div>
@@ -149,7 +156,7 @@
 
             </div>
 
-            <div id="more-rooms" style="display: none;">
+            <!-- <div id="more-rooms" style="display: none;">
               <div class="suite-wrap overlap-image-1">
                 <div class="suite">
                   <div class="image-stack">
@@ -237,13 +244,13 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
-            <div class="row mt-5">
+            <!-- <div class="row mt-5">
               <div class="col-12 text-center" data-aos="fade-up">
                 <button id="toggle-rooms-btn" class="btn btn-black px-5 text-white">Show All Rooms</button>
               </div>
-            </div>
+            </div> -->
 
           </div>
         </div>
@@ -259,30 +266,7 @@
             </div>
           
             <div class="row custom-row-02192 align-items-stretch">
-              <!-- <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
-                <div class="media-29191 text-center h-100 p-0 overflow-hidden">
-                  <div class="px-4 py-4 pt-5">
-                    <div class="media-29191-icon mb-4">
-                      <img loading="lazy" src="images/svg/parking.svg" alt="Icon" class="img-fluid" style="width: 50px;">
-                    </div>
-                    <h3>24 Hours Power Supply</h3>
-                    <p>Reliable and uninterrupted power supply 24/7 to ensure a seamless experience for all our guests.</p>
-                  </div>
-                </div>
-              </div> -->
-              
-              <!-- <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
-                <div class="media-29191 text-center h-100 p-0 overflow-hidden">
-                  <div class="px-4 py-4 pt-5">
-                    <div class="media-29191-icon mb-4">
-                      <img loading="lazy" src="images/svg/wifi.svg" alt="Icon" class="img-fluid" style="width: 50px;">
-                    </div>
-                    <h3>Free Wi-Fi</h3>
-                    <p>Stay connected with our high-speed complimentary Wi-Fi available throughout the hotel premises.</p>
-                  </div>
-                </div>
-              </div> -->
-
+             
               <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="300">
                 <div class="media-29191 text-center h-100 p-0 overflow-hidden">
                   <img loading="lazy" src="images/Gym.jpg" alt="Gym" class="img-fluid mb-4 amenity-img">
@@ -357,22 +341,6 @@
             transform: scale(1.05);
           }
         </style>
-            </div>
-          </div>
-        </div>
-        </div>
-        
-
-        
-        
-
-
-   
-
-    
-        
-
-        
           <div class="untree_co--site-section">
           <div class="container">
             
@@ -383,16 +351,16 @@
                 <div class="col-md-6 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay="100">
                   
                   <form action="process_contact.php" method="POST">
-                    <?php if (isset($_GET['message'])): ?>
-                    <div class="alert alert-success mb-4" role="alert">
-                      <?php echo htmlspecialchars($_GET['message']); ?>
+                    
+                    <div class="alert alert-success d-none mb-4" role="alert" id="statusSuccess">
+                      
                     </div>
-                    <?php endif; ?>
-                    <?php if (isset($_GET['error'])): ?>
-                    <div class="alert alert-danger mb-4" role="alert">
-                      <?php echo htmlspecialchars($_GET['error']); ?>
+                    
+                    
+                    <div class="alert alert-danger d-none mb-4" role="alert" id="statusError">
+                      
                     </div>
-                    <?php endif; ?>
+                    
 
                     <div class="form-group">
                       <label for="name">Your Name *</label>
@@ -427,7 +395,7 @@
                 <div class="col-md-4 ml-auto"  data-aos="fade-up" data-aos-delay="200">
                   <div class="media-29190">
                     <span class="label">Email</span>
-                    <p><a href="mailto:info.Bayelsa@trendsplacehotelandsuites.com">info.Bayelsa@trendsplacehotelandsuites.com</a></p>
+                    <p><a href="mailto:bayelsa@trendsplacehotelandsuites.com">bayelsa@trendsplacehotelandsuites.com</a></p>
                   </div>
                   <div class="media-29190">
                     <span class="label">Phone</span>
@@ -440,18 +408,12 @@
                   <div class="media-29190">
                     <span class="label">Social</span>
                     <ul class="icons-top icons-dark">
-                      <!-- <li>
-                        <a href="#"><span class="icon-facebook"></span></a>
-                      </li> -->
                       <li>
                         <a href="https://www.tiktok.com/@trends.place.bayelsa"><span class="icon-play"></span></a>
                       </li>
                       <li>
                         <a href="https://www.instagram.com/trendsplacebayelsa"><span class="icon-instagram"></span></a>
                       </li>
-                      <!-- <li>
-                        <a href="#"><span class="icon-tripadvisor"></span></a>
-                      </li> -->
                     </ul>
                   </div>
                 </div>
@@ -461,23 +423,23 @@
           </div>
         </div>
 
-  
-
       </div>
-      <?php include 'includes/footer.php'; ?>
+      
     </div>
 
-    <script src="js/vendor/jquery-3.3.1.min.js"></script>
-    <script src="js/vendor/popper.min.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
+    <?php include 'includes/footer.php'; ?>
 
-    <script src="js/vendor/owl.carousel.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     
     <script src="js/vendor/jarallax.min.js"></script>
     <script src="js/vendor/jarallax-element.min.js"></script>
     <script src="js/vendor/ofi.min.js"></script>
 
-    <script src="js/vendor/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="js/vendor/jquery.lettering.js"></script>
     <script src="js/vendor/jquery.sticky.js"></script>
@@ -490,23 +452,27 @@
 
     <script src="js/main.js"></script>
     <script>
-      document.getElementById('toggle-rooms-btn').addEventListener('click', function() {
-        var moreRooms = document.getElementById('more-rooms');
-        if (moreRooms.style.display === 'none') {
-          moreRooms.style.display = 'block';
-          this.innerHTML = 'Show Less';
-          // Re-trigger AOS animations for hidden elements
-          setTimeout(function() {
-            if (typeof AOS !== 'undefined') {
-              AOS.refresh();
-            }
-          }, 100);
-        } else {
-          moreRooms.style.display = 'none';
-          this.innerHTML = 'Show All Rooms';
-          // Scroll back up to featured rooms
-          document.querySelector('.featured-rooms').scrollIntoView({ behavior: 'smooth' });
-        }
+      $(document).ready(function() {
+        $('#toggle-rooms-btn').on('click', function() {
+          var moreRooms = $('#more-rooms');
+          if (moreRooms.is(':hidden')) {
+            moreRooms.slideDown(500);
+            $(this).text('Show Less');
+            // Re-trigger AOS animations for hidden elements
+            setTimeout(function() {
+              if (typeof AOS !== 'undefined') {
+                AOS.refresh();
+              }
+            }, 100);
+          } else {
+            moreRooms.slideUp(500);
+            $(this).text('Show All Rooms');
+            // Scroll back up to featured rooms
+            $('html, body').animate({
+              scrollTop: $(".featured-rooms").offset().top
+            }, 500);
+          }
+        });
       });
     </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166033648-1"></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-166033648-1");</script></body>

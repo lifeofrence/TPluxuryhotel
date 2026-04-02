@@ -13,10 +13,10 @@
   <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500i,700|Roboto:300,400,500,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/vendor/icomoon/style.css">
-  <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/vendor/aos.css">
-  <link rel="stylesheet" href="css/vendor/animate.min.css">
-  <link rel="stylesheet" href="css/vendor/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/vendor/jquery.fancybox.min.css">
 
   <!-- Theme Style -->
@@ -45,9 +45,8 @@
 
   <div id="untree_co--overlayer"></div>
   <div class="loader">
-    <div class="loader-logo"><img loading="lazy" src="images/logotp.png" alt="Trend's Place Logo"></div>
+    <div class="loader-logo"><img src="images/logotp.png" alt="Trend's Place Logo"></div>
   </div>
-
 
     <?php $headerClass = 'dark'; include 'includes/header.php'; ?>
 
@@ -78,11 +77,11 @@
               <div class="booking-form-wrap" data-aos="fade-up">
                 <h3 class="mb-4">Reservation Details</h3>
 
-                <?php if (isset($_GET['status']) && isset($_GET['message'])): ?>
-                <div class="alert alert-<?php echo $_GET['status'] === 'success' ? 'success' : 'danger'; ?> mb-4" role="alert">
-                  <?php echo htmlspecialchars($_GET['message']); ?>
+                
+                <div class="alert alert-info mb-4 d-none" role="alert" id="statusAlert">
+                  
                 </div>
-                <?php endif; ?>
+                
 
                 <form action="process_booking.php" method="POST" id="bookingForm">
                   <div class="row">
@@ -108,11 +107,11 @@
                   <div class="row">
                     <div class="col-md-6 form-group">
                       <label for="checkin">Check-in Date *</label>
-                      <input type="date" id="checkin" name="checkin" class="form-control" value="<?php echo date('Y-m-d'); ?>" required>
+                      <input type="date" id="checkin" name="checkin" class="form-control" value="" required>
                     </div>
                     <div class="col-md-6 form-group">
                       <label for="checkout">Check-out Date *</label>
-                      <input type="date" id="checkout" name="checkout" class="form-control" value="<?php echo date('Y-m-d', strtotime('+1 day')); ?>" required>
+                      <input type="date" id="checkout" name="checkout" class="form-control" value="" required>
                     </div>
                   </div>
                   <div class="row">
@@ -273,16 +272,17 @@
     </main>
 
     <?php include 'includes/footer.php'; ?>
+
   </div>
 
-  <script src="js/vendor/jquery-3.3.1.min.js"></script>
-  <script src="js/vendor/popper.min.js"></script>
-  <script src="js/vendor/bootstrap.min.js"></script>
-  <script src="js/vendor/owl.carousel.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="js/vendor/jarallax.min.js"></script>
   <script src="js/vendor/jarallax-element.min.js"></script>
   <script src="js/vendor/ofi.min.js"></script>
-  <script src="js/vendor/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/vendor/jquery.lettering.js"></script>
   <script src="js/vendor/jquery.sticky.js"></script>
   <script src="js/vendor/jquery.fancybox.min.js"></script>

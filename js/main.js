@@ -14,8 +14,8 @@ $(function() {
 
 	'use strict';
 
-	$(".loader").delay(700).fadeOut("slow");
-  $("#untree_co--overlayer").delay(700).fadeOut("slow");	
+	$(".loader").delay(200).fadeOut(300);
+  $("#untree_co--overlayer").delay(200).fadeOut(300);	
 
 
 
