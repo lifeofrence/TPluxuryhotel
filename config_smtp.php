@@ -11,6 +11,6 @@ function setupSMTP($mail)
     $mail->Port = 465;
 
     // Default From Address
-    $mail->setFrom('info@jenniferlamivisuals.com', 'JenniferLami Visuals');
+    $mail->setFrom('info@jenniferlamivisuals.com', "Trend's Place Hotel & Suites");
 }
 ?>

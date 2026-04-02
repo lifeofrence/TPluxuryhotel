@@ -79,9 +79,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
       $mailClient->Port = 2525;
 
 
-      $mailClient->setFrom('bookings@caritonhotel.com', 'Cariton Hotel');
+      $mailClient->setFrom('bayelsa@trendsplacehotelandsuites.com', "Trend's Place Hotel & Suites");
       $mailClient->addAddress($email, $name);
-      $mailClient->Subject = 'Booking Confirmation - Cariton Hotel';
+      $mailClient->Subject = "Booking Confirmation - Trend's Place Hotel & Suites";
       $mailClient->isHTML(true);
 
       $clientEmailContent = "
@@ -93,14 +93,14 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
               <table role='presentation' width='600' cellpadding='0' cellspacing='0' style='background:#ffffff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);'>
                 <tr>
                   <td style='background:#1a1a1a;color:#d4af37;padding:20px 24px;'>
-                    <div style='font-size:20px;font-weight:600;'>Cariton Hotel</div>
+                    <div style='font-size:20px;font-weight:600;'>Trend's Place Hotel & Suites</div>
                     <div style='font-size:13px;opacity:.85; color:#ffffff;'>Booking Confirmation</div>
                   </td>
                 </tr>
                 <tr>
                   <td style='padding:24px;color:#111827;'>
                     <p style='margin:0 0 12px;'>Dear $name,</p>
-                    <p style='margin:0 0 20px;color:#374151;'>Thank you for choosing Cariton Hotel. Your booking has been confirmed. Here are your details:</p>
+                    <p style='margin:0 0 20px;color:#374151;'>Thank you for choosing Trend's Place Hotel & Suites. Your booking has been confirmed. Here are your details:</p>
                     <table width='100%' cellpadding='0' cellspacing='0' style='border-collapse:collapse;'>
                       <tr><td style='padding:8px 0;color:#6b7280;'>Room Type</td><td style='padding:8px 0;text-align:right;font-weight:600;color:#111827;'>$room</td></tr>
                       <tr><td style='padding:8px 0;color:#6b7280;'>Check-in</td><td style='padding:8px 0;text-align:right;font-weight:600;color:#111827;'>$checkinFormatted</td></tr>
@@ -119,15 +119,15 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         <span style='font-size:18px;font-weight:700;color:#111827;'>&#x20A6;$totalPrice</span>
                       </div>
                     </div>
-                    <p style='margin:0 0 12px;color:#374151;'>We look forward to welcoming you to Cariton Hotel!</p>
-                    <p style='margin:0;color:#6b7280;font-size:13px;'>If you have any questions or need to modify your booking, please reply to this email or call us at +234 704 473 8132.</p>
+                    <p style='margin:0 0 12px;color:#374151;'>We look forward to welcoming you to Trend's Place Hotel & Suites!</p>
+                    <p style='margin:0;color:#6b7280;font-size:13px;'>If you have any questions or need to modify your booking, please reply to this email or call us at +234 701 783 4528.</p>
                   </td>
                 </tr>
                 <tr>
                   <td style='background:#f9fafb;padding:16px;text-align:center;color:#6b7280;font-size:12px;'>
-                    <strong>Cariton Hotel</strong><br>
-                    3 Tex Olawale Street, Lagos, Nigeria<br>
-                    Phone: +234 704 473 8132 | Email: info@caritonhotel.com
+                    <strong>Trend's Place Hotel & Suites</strong><br>
+                    10 Prosco road, Yenagoa, Bayelsa<br>
+                    Phone: +234 701 783 4528 | Email: bayelsa@trendsplacehotelandsuites.com
                   </td>
                 </tr>
               </table>
@@ -166,9 +166,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
       $mailAdmin->Port = 2525;
 
 
-      $mailAdmin->setFrom('bookings@caritonhotel.com', 'Cariton Hotel');
-      $mailAdmin->addAddress('info@caritonhotel.com', 'Cariton Hotel Admin'); // Admin email
-      $mailAdmin->Subject = 'New Booking Received - Cariton Hotel';
+      $mailAdmin->setFrom('bayelsa@trendsplacehotelandsuites.com', "Trend's Place Hotel & Suites");
+      $mailAdmin->addAddress('bayelsa@trendsplacehotelandsuites.com', "Trend's Place Hotel & Suites Admin"); // Admin email
+      $mailAdmin->Subject = "New Booking Received - Trend's Place Hotel & Suites";
       $mailAdmin->isHTML(true);
 
       $adminEmailContent = "
@@ -180,7 +180,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
               <table role='presentation' width='600' cellpadding='0' cellspacing='0' style='background:#ffffff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);'>
                 <tr>
                   <td style='background:#1a1a1a;color:#ffffff;padding:20px 24px;'>
-                    <div style='font-size:20px;font-weight:600;'>Cariton Hotel</div>
+                    <div style='font-size:20px;font-weight:600;'>Trend's Place Hotel & Suites</div>
                     <div style='font-size:13px;opacity:.85;'>New Booking Received</div>
                   </td>
                 </tr>
